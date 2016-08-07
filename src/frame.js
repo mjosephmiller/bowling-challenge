@@ -9,6 +9,9 @@ function Frame() {
 Frame.prototype.firstBowl = function(knockedPins){
   this.firstBowlScore = knockedPins;
   this.totalFrameScore = knockedPins;
+  if (this.firstBowlScore === 10) {
+    this.isComplete = true;
+  }
 };
 
 Frame.prototype.secondBowl = function(knockedPins){

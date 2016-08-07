@@ -23,6 +23,16 @@ describe('Frame', function(){
     expect(frame.firstBowlScore).toEqual(0);
   });
 
+  it('is complete if first bowl knocks down all pins', function(){
+    frame.firstBowl(10)
+    expect(frame.isComplete).toBeTruthy();
+  });
+
+  it('is incomplete if first bowl knocks down less than all pins', function(){
+    frame.firstBowl(8)
+    expect(frame.isComplete).toBeFalsy();
+  });
+
   it('sets the secondBowlScore to zero', function(){
     expect(frame.secondBowlScore).toEqual(0);
   });
