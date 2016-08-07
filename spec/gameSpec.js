@@ -9,7 +9,7 @@ describe('Game', function(){
       expect(game.totalScore).toEqual(0);
     });
 
-    it('starts with the first frame', function(){
-      expect(game.frame).toEqual(1);
+    it('starts with an empty array of frames', function(){
+      expect(game.frames).toEqual([]);
     });
 });
